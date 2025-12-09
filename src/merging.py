@@ -2,7 +2,7 @@ import pandas as pd
 
 # URL function
 def get_gw_urls(gw: int):
-  gw_path = "https://raw.githubusercontent.com/olbauday/FPL-Elo-Insights/refs/heads/main/data/2025-2026/By%20Gameweek/GW"
+  gw_path = "https://raw.githubusercontent.com/olbauday/FPL-Elo-Insights/refs/heads/main/data/2025-2026/By%20Tournament/Premier%20League/GW"
   url_stats = f"{gw_path}{gw}/playermatchstats.csv"
   url_players = f"{gw_path}{gw}/players.csv"
   url_teams = f"{gw_path}{gw}/teams.csv"
