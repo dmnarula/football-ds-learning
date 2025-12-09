@@ -1,5 +1,14 @@
 import pandas as pd
 
+# URL function
+def get_gw_urls(gw: int):
+  gw_path = "https://raw.githubusercontent.com/olbauday/FPL-Elo-Insights/refs/heads/main/data/2025-2026/By%20Gameweek/GW"
+  url_stats = f"{gw_path}{gw}/playermatchstats.csv"
+  url_players = f"{gw_path}{gw}/players.csv"
+  url_teams = f"{gw_path}{gw}/teams.csv"
+  url_matches = f"{gw_path}{gw}/matches.csv"
+  return url_stats, url_players, url_teams, url_matches
+
 # Merging data function
 def build_match_df(url_stats, url_players, url_teams, url_matches):
     df_stats   = pd.read_csv(url_stats)
