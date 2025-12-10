@@ -12,26 +12,21 @@ def register_font(font_path: str):
     font_name = fm.FontProperties(fname=font_path).get_name()
     return font_name
 
+# Setting plot style
 def set_plot_style():
+
   # Register font files - Montserrat
-  base = Path(__file__).resolve().parents[1]
-  font_dir = base / "fonts"
-  
-  font_files = [
-      "Montserrat-Regular.ttf",
-      "Montserrat-Medium.ttf",
-      "Montserrat-SemiBold.ttf",
-      "Montserrat-Bold.ttf",
-      "Montserrat-Light.ttf",
+  base = "/content/football-ds-learning/fonts/"
+  font_paths = [
+      f"{base}/Montserrat-Regular.ttf",
+      f"{base}/Montserrat-Medium.ttf",
+      f"{base}/Montserrat-SemiBold.ttf",
+      f"{base}/Montserrat-Bold.ttf",
+      f"{base}/Montserrat-Light.ttf",
   ]
-  
-  # Register all Montserrat fonts
-  for fname in font_files:
-    path = font_dir / fname
-    if path.exists():
-      register_font(str(path))
-    else:
-      print(f"Warning: Font file not found — {path}")
+
+  for path in font_paths:
+    register_font(path)
 
   # Set defaults
   plt.rcParams.update({
@@ -62,7 +57,17 @@ def set_plot_style():
       "legend.edgecolor": "none"
   })
 
+
+
   # Specific styles
+  title_font = FontProperties(family="Montserrat", weight="semibold", size=44)
+  subtitle_font = FontProperties(family="Montserrat", weight="medium", size=22)
+  dot_label_font = FontProperties(family="Montserrat", weight="medium", size=16)
+  axis_font = FontProperties(family="Montserrat", weight="medium", size=28)
+  label_font = FontProperties(family="Montserrat", weight="medium", size=20)
+  tick_font = FontProperties(family="Montserrat", weight="regular", size=16)
+  footer_font = FontProperties(family="Montserrat", weight="regular", size=14)
+
   return {
       "title": FontProperties(family="Montserrat", weight="semibold", size=44),
       "subtitle": FontProperties(family="Montserrat", weight="medium", size=22),
@@ -70,5 +75,5 @@ def set_plot_style():
       "axis": FontProperties(family="Montserrat", weight="medium", size=28),
       "label": FontProperties(family="Montserrat", weight="medium", size=20),
       "tick": FontProperties(family="Montserrat", weight="regular", size=16),
-      "footer": FontProperties(family="Montserrat", weight="regular", size=14)
+      "footer": FontProperties(family="Montserrat", weight="regular", size=14),
   }
