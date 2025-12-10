@@ -41,14 +41,6 @@ def set_plot_style():
   plt.rcParams["axes.linewidth"] = 0.8
 
   # Specific styles
-  title_font = FontProperties(family="Montserrat", weight="semibold", size=44)
-  subtitle_font = FontProperties(family="Montserrat", weight="medium", size=22)
-  dot_label_font = FontProperties(family="Montserrat", weight="medium", size=16)
-  axis_font = FontProperties(family="Montserrat", weight="medium", size=28)
-  label_font = FontProperties(family="Montserrat", weight="medium", size=20)
-  tick_font = FontProperties(family="Montserrat", weight="regular", size=16)
-  footer_font = FontProperties(family="Montserrat", weight="regular", size=14)
-
   return {
       "title": FontProperties(family="Montserrat", weight="semibold", size=44),
       "subtitle": FontProperties(family="Montserrat", weight="medium", size=22),
@@ -56,5 +48,5 @@ def set_plot_style():
       "axis": FontProperties(family="Montserrat", weight="medium", size=28),
       "label": FontProperties(family="Montserrat", weight="medium", size=20),
       "tick": FontProperties(family="Montserrat", weight="regular", size=16),
-      "footer": FontProperties(family="Montserrat", weight="regular", size=14),
+      "footer": FontProperties(family="Montserrat", weight="regular", size=14)
   }
