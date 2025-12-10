@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
 from matplotlib.font_manager import FontProperties
@@ -33,12 +34,33 @@ def set_plot_style():
       print(f"Warning: Font file not found — {path}")
 
   # Set defaults
-  plt.rcParams["font.family"] = 'Montserrat'
-  plt.rcParams["font.weight"] = 'regular'
-  plt.rcParams["figure.facecolor"] = "#f2f2f2"
-  plt.rcParams["axes.facecolor"] = "#f2f2f2"
-  plt.rcParams["axes.edgecolor"] = "#999999"
-  plt.rcParams["axes.linewidth"] = 0.8
+  plt.rcParams.update({
+      "font.family": "Montserrat",
+      
+      "figure.facecolor": "#f2f2f2",
+      "axes.facecolor": "#f2f2f2",
+      "axes.edgecolor": "#999999",
+      "axes.linewidth": 0.8,
+
+      "axes.grid": True,
+      "grid.color": "#DDDDDD",
+      "grid.linewidth": 0.6,
+      "grid.alpha": 0.8,
+      "axes.axisbelow": True,
+
+      "xtick.color": "#888888",
+      "ytick.color": "#888888",
+      "xtick.direction": "out",
+      "ytick.direction": "out",
+      "xtick.major.size": 4,
+      "ytick.major.size": 4,
+      "xtick.major.width": 0.6,
+      "ytick.major.width": 0.6,
+
+      "legend.frameon": True,
+      "legend.facecolor": "#f2f2f2",
+      "legend.edgecolor": "none"
+  })
 
   # Specific styles
   return {
