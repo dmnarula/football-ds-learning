@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
-from matplotlib.font_manager improt FontProperties
+from matplotlib.font_manager import FontProperties
 
 
 def register_font(font_path: str):
