@@ -1,12 +1,13 @@
-import matplotlib.font_manager as fm
-import matplotlib.pyplot as plt
 import os
+import matplotlib.pyplot as plt
+import matplotlib.font_manager as fm
+from matplotlib.font_manager improt FontProperties
+
 
 def register_font(font_path: str):
     # Register custom font
     fm.fontManager.addfont(font_path)
     font_name = fm.FontProperties(fname=font_path).get_name()
-    plt.rcParams['font.family'] = font_name
     return font_name
 
 def set_plot_style():
