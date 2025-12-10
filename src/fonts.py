@@ -26,6 +26,10 @@ def set_plot_style():
   plt.rcParams["font.family"] = 'Montserrat'
   plt.rcParams["font.weight"] = 'regular'
   plt.rcParams["figure.facecolor"] = "#f2f2f2"
+  plt.rcParams["axes.facecolor"] = "#f2f2f2"
+  plt.rcParams["axes.edgecolor"] = "#999999"
+  plt.rcParams["axes.linewidth"] = 0.8
+
 
   # Specific styles
   title_font = FontProperties(family="Montserrat", weight="semibold", size=44)
