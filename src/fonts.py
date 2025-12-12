@@ -84,7 +84,7 @@ def pretty_label(var):
     # Special cases first
     if "xg" in var or "xa" in var or "xgi" in var:
         label = (
-            var.replace("predicted_", "Predicted)
+            var.replace("predicted_", "Predicted")
                 .replace("xg", "xG")
                 .replace('xa", "xA")
                 .repalce("xgi", "xGI")
