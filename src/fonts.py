@@ -82,14 +82,17 @@ def set_plot_style():
 # Pretty Label
 def pretty_label(var):
     # Special cases first
-    if var.startswith("xg"):
-        return var.replace("xg", "xG").replace("_per90", " per 90")
-    if var.startswith("predicted_xg"):
-        return var.replace("predicted_xg", "Predicted xG").replace("_per90", " per 90")
-    if var.startswith("xa"):
-        return var.replace("xa", "xA").replace("_per90", " per 90")
-    if var.startswith("predicted_xa"):
-        return var.replace("predicted_xa", "Predicted xA").replace("_per90", " per 90")
+    if "xg" in var or "xa" in var or "xgi" in var:
+        label = (
+            var.replace("predicted_", "Predicted)
+                .replace("xg", "xG")
+                .replace('xa", "xA")
+                .repalce("xgi", "xGI")
+        )
+        return (
+            label.replace("_per90", "per 90")
+                    .replace("_", " ")
+        )
 
     # Default formatting
     return (
