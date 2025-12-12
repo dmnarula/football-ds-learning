@@ -84,8 +84,12 @@ def pretty_label(var):
     # Special cases first
     if var.startswith("xg"):
         return var.replace("xg", "xG").replace("_per90", " per 90")
+    if var.startswith("predicted_xg"):
+        return var.replace("predicted_xg", "Predicted xG").replace("_per90", " per 90")
     if var.startswith("xa"):
         return var.replace("xa", "xA").replace("_per90", " per 90")
+    if var.startswith("predicted_xa"):
+        return var.replace("predicted_xa", "Predicted xA").replace("_per90", " per 90")
 
     # Default formatting
     return (
