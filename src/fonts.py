@@ -77,3 +77,20 @@ def set_plot_style():
       "tick": FontProperties(family="Montserrat", weight="regular", size=16),
       "footer": FontProperties(family="Montserrat", weight="regular", size=14),
   }
+
+
+# Pretty Label
+def pretty_label(var):
+    # Special cases first
+    if var.startswith("xg"):
+        return var.replace("xg", "xG").replace("_per90", " per 90")
+    if var.startswith("xa"):
+        return var.replace("xa", "xA").replace("_per90", " per 90")
+
+    # Default formatting
+    return (
+        var.replace("_per90", " per 90")
+           .replace("_", " ")
+           .title()
+    )
+
