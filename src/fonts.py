@@ -87,7 +87,7 @@ def pretty_label(var):
             var.replace("predicted_", "Predicted")
                 .replace("xg", "xG")
                 .replace("xa", "xA")
-                .repalce("xgi", "xGI")
+                .replace("xgi", "xGI")
         )
         return (
             label.replace("_per90", "per 90")
